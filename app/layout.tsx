@@ -54,7 +54,7 @@ export default function RootLayout({
         )}
         {/* 添加统计代码 */}
         <script
-          charset="UTF-8"
+          charSet="UTF-8"
           id="LA_COLLECT"
           src="//sdk.51.la/js-sdk-pro.min.js?id=KU4LkTcD1U1m792W&ck=KU4LkTcD1U1m792W"
           defer
