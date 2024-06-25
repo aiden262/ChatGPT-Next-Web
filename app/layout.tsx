@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import React, { useEffect } from 'react';
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
@@ -7,6 +8,7 @@ import { type Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
 import { GoogleTagManager } from "@next/third-parties/google";
+
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
@@ -32,6 +34,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    // 确保代码只在客户端执行
+    if (typeof window !== 'undefined') {
+      // 动态加载统计脚本
+      const script = document.createElement('script');
+      script.src = "//sdk.51.la/js-sdk-pro.min.js";
+      script.charset = "UTF-8";
+      script.id = "LA_COLLECT";
+      document.body.appendChild(script);
+
+      // 脚本加载完成后初始化统计代码
+      script.onload = () => {
+        // 初始化统计代码
+        window.LA?.init({id:"KU4LkTcD1U1m792W",ck:"KU4LkTcD1U1m792W"});
+      };
+    }
+  }, []);
+
   return (
     <html lang="en">
       <head>
