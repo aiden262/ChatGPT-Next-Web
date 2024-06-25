@@ -1,3 +1,5 @@
+// layout.tsx
+// use client
 /* eslint-disable @next/next/no-page-custom-font */
 import React, { useEffect } from 'react';
 import "./styles/globals.scss";
