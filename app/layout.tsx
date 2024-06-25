@@ -40,7 +40,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
         {/* Google Analytics */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}></script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=G-3L23HVX3J3`}></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
