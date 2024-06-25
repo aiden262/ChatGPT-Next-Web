@@ -39,7 +39,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
-        <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=KU4LkTcD1U1m792W&ck=KU4LkTcD1U1m792W"></script>
       </head>
       <body>
         {children}
@@ -53,6 +52,13 @@ export default function RootLayout({
             <GoogleTagManager gtmId={serverConfig.gtmId} />
           </>
         )}
+        {/* 添加统计代码 */}
+        <script
+          charset="UTF-8"
+          id="LA_COLLECT"
+          src="//sdk.51.la/js-sdk-pro.min.js?id=KU4LkTcD1U1m792W&ck=KU4LkTcD1U1m792W"
+          defer
+        ></script>
       </body>
     </html>
   );
